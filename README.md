@@ -1,18 +1,23 @@
 # desafio-conexa
 https://gitlab.com/conexasaude-public/desafio-tecnico-backend-conexa
 
+### Para executar o projeto spring boot navegue até a raiz do projeto e execute os comandos abaixo:
+```bash
+mvn spring-boot:run
+```
+
 ## Backend
 
-Spring Boot incluindo as dependências do spring para desenvolvimento de rest api.
+Spring Boot incluindo as dependências do spring para desenvolvimento de rest api
 
-#### Banco
+#### Banco:
     H2 e mysql
 
-#### Provedor JPA
-    Spring Data JPA com Hibernate.
+#### Provedor JPA:
+    Spring Data JPA com Hibernate
 
-#### Testes: 
-    Spring boot tester com JUnit.
+#### Testes:
+    Spring boot tester com JUnit
 
 #### Actuator: 
     http://host:port/conexa-api/actuator
@@ -44,9 +49,4 @@ Spring Boot incluindo as dependências do spring para desenvolvimento de rest ap
   "usuario": "medico@email.com",
   "senha": "senhamedico"
 }
-```
-
-Para executar o projeto spring boot navegue até a raiz do projeto e execute os comandos abaixo:
-```bash
-mvn spring-boot:run
 ```
