@@ -20,13 +20,15 @@ Exceptions:
     - Anotação @RestControllerAdvice para padronizar as respostas.
     - Dentro da msg de erro contém um atributo "codeErrorRandom" para facilitar a busca de erros no log.
     - Em caso de erro na api rest o projeto irá retornar msg em formato json padronizado, segue exemplo abaixo:
-        {
-            "timestamp": "yyyy-MM-dd hh:mm:ss",
-            "code": xxx,
-            "status": "xxx",
-            "error": "xxx",
-            "codeErrorRandom": "xxx"
-        }
+ ```bash
+{
+    "timestamp": "yyyy-MM-dd hh:mm:ss",
+    "code": xxx,
+    "status": "xxx",
+    "error": "xxx",
+    "codeErrorRandom": "xxx"
+}
+```
 
 JWT: Para realizar login na aplicação faça a requisição de post para
   http://localhost:8080/conexa-api/auth com o seguinte body: 
