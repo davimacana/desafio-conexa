@@ -14,13 +14,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Davi Maçana
  *
  */
-@Data
+@Getter @Setter
 @Entity
 public class Agendamento implements Serializable {
 

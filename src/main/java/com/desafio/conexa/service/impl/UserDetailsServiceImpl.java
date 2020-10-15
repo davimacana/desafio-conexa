@@ -6,10 +6,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.desafio.conexa.Messages;
 import com.desafio.conexa.entity.Usuario;
 import com.desafio.conexa.repository.UsuarioRepository;
 import com.desafio.conexa.security.jwt.UserPrinciple;
+import com.desafio.conexa.utils.Messages;
 
 /**
  * @author Davi Maçana

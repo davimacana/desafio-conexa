@@ -38,26 +38,33 @@ public class DesafioConexaApplication {
 			UsuarioRepository usuarioRepository, PasswordEncoder encoder, AgendamentoRepository agendamentoRepository) {
 		return (args) -> {
 			
-			Paciente paciente = new Paciente();
-			paciente.setCpf("142.939.697-05");
-			paciente.setIdade(25);
-			paciente.setNome("Martha Maçana");
-			paciente.setTelefone("+55 (21) 98655-0659");
-			pacienteRepository.save(paciente);
+			Paciente pacienteUm = new Paciente();
+			pacienteUm.setCpf("408.895.034-86");
+			pacienteUm.setIdade(55);
+			pacienteUm.setNome("Carla Elaine Sônia Ramos");
+			pacienteUm.setTelefone("+55 (96) 99558-8378");
+			pacienteRepository.save(pacienteUm);
+			
+			Paciente pacienteDois = new Paciente();
+			pacienteDois.setCpf("587.999.624-70");
+			pacienteDois.setIdade(28);
+			pacienteDois.setNome("Mariana Luciana Benedita da Costa");
+			pacienteDois.setTelefone("+55 (89) 98724-5942");
+			pacienteRepository.save(pacienteDois);
 			
 			Usuario usuario = new Usuario();
-			usuario.setUsuario("Davi");
-			usuario.setSenha(encoder.encode("123"));
+			usuario.setUsuario("medico@email.com");
+			usuario.setSenha(encoder.encode("senhamedico"));
 			
 			Medico medico = new Medico();
 			medico.setNome("Davi Maçana");
-			medico.setEspecialidade("Psiquiatria");
+			medico.setEspecialidade("Cirurgia Geral");
 			
 			List<Agendamento> agendamentos = new ArrayList<>();
 			Agendamento agendamento = new Agendamento();
 			agendamento.setDataHora(Calendar.getInstance());
 			agendamento.setMedico(medico);
-			agendamento.setPaciente(paciente);
+			agendamento.setPaciente(pacienteDois);
 			agendamentos.add(agendamento);
 			
 			medico.setAgendamentos(agendamentos);

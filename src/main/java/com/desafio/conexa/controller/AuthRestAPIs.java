@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.desafio.conexa.Messages;
 import com.desafio.conexa.dto.AgendamentoDTO;
 import com.desafio.conexa.dto.JwtResponseDTO;
 import com.desafio.conexa.dto.UsuarioDTO;
@@ -29,6 +28,7 @@ import com.desafio.conexa.entity.Usuario;
 import com.desafio.conexa.security.jwt.JwtProvider;
 import com.desafio.conexa.service.BlackListTokenService;
 import com.desafio.conexa.service.UsuarioService;
+import com.desafio.conexa.utils.Messages;
 
 import io.swagger.annotations.Api;
 
