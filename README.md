@@ -6,8 +6,11 @@ https://gitlab.com/conexasaude-public/desafio-tecnico-backend-conexa
 Spring Boot incluindo as dependências do spring para desenvolvimento de rest api.
 
 Banco: H2 e mysql
+
 Provedor JPA: Spring Data JPA com Hibernate.
+
 Testes: Spring boot tester com JUnit.
+
 Actuator: http://host:port/conexa-api/actuator
     Ao realizar uma requisição GET no link do atuator a resposta será uma série de 
     recursos para monitoramento da API do aplicação.
