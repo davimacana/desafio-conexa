@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.desafio.conexa.dto.AgendamentoDTO;
 import com.desafio.conexa.dto.JwtResponseDTO;
 import com.desafio.conexa.dto.UsuarioDTO;
-import com.desafio.conexa.entity.Agendamento;
 import com.desafio.conexa.entity.BlackListToken;
 import com.desafio.conexa.entity.Usuario;
 import com.desafio.conexa.security.jwt.JwtProvider;
@@ -73,9 +72,9 @@ public class AuthRestAPIs {
 				usuario.getMedico().getEspecialidade(), 
 				new ArrayList<>());
 		
-		for (Agendamento agendamento : usuario.getMedico().getAgendamentos()) {
-			jwtDTO.getAgendamentos().add(new AgendamentoDTO(agendamento.getPaciente().getIdPaciente(), agendamento.getDataHora()));
-		}
+		usuario.getMedico().getAgendamentos().forEach(
+				(agendamento) -> jwtDTO.getAgendamentos().add(new AgendamentoDTO(agendamento.getPaciente().getIdPaciente(), agendamento.getDataHora()))
+		);
 		
 		return ResponseEntity.ok(jwtDTO);
 	}
